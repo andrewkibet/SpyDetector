@@ -48,9 +48,7 @@ public class GlobalActionBarService extends AccessibilityService {
     protected void onServiceConnected() {
 
 
-        //Setting up types of the event tha this service wants to listen to others won't be passed to this services
         System.out.println("onService Connected");
-        Toast.makeText(this, "this package name is " + this.getPackageName(), Toast.LENGTH_SHORT).show();
         AccessibilityServiceInfo info = new AccessibilityServiceInfo();
         info.eventTypes = AccessibilityEvent.TYPE_NOTIFICATION_STATE_CHANGED;
         info.eventTypes = AccessibilityEvent.TYPES_ALL_MASK;
