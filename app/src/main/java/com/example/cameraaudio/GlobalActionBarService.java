@@ -20,7 +20,6 @@ import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
@@ -47,8 +46,8 @@ public class GlobalActionBarService extends AccessibilityService {
     @Override
     protected void onServiceConnected() {
 
-
-        System.out.println("onService Connected");
+//
+//        System.out.println("onService Connected");
         AccessibilityServiceInfo info = new AccessibilityServiceInfo();
         info.eventTypes = AccessibilityEvent.TYPE_NOTIFICATION_STATE_CHANGED;
         info.eventTypes = AccessibilityEvent.TYPES_ALL_MASK;
@@ -92,7 +91,6 @@ public class GlobalActionBarService extends AccessibilityService {
             @Override
             public void handleMessage(@NonNull Message msg) {
                 super.handleMessage(msg);
-                Toast.makeText(GlobalActionBarService.this, "handler", Toast.LENGTH_SHORT).show();
             }
         };
         CameraManager manager = (CameraManager) getSystemService(Context.CAMERA_SERVICE);
