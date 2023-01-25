@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
     TextView button;
     TextView FAQ;
+    Button bn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         button = findViewById(R.id.button);
         FAQ = findViewById(R.id.FAQ);
+        bn = findViewById(R.id.dn);
+
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -30,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        FAQ.setOnClickListener(v -> {
-            startActivity(new Intent(this, FAQ.class));
+        bn.setOnClickListener(v -> {
+            startActivity(new Intent(this, DennoActivity.class));
         });
     }
 
