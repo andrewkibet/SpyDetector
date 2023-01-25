@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/design_default_color_on_primary"
+    android:background="@color/teal_700"
 
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -23,6 +23,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/purple_700"
             android:layout_margin="20dp"
             android:text="STEPS:\n1)Install the app and Click on the ''allow permission'' below, it will redirect you to the Accessibility setting. \n 3) turn on the accessibility setting for this app ''cameraaudio''.\n              That's All. \n red Dots-> Some app is accessing your camera \n Green  Dots -> Everything is ok, No app is accessing your camera. "
             android:textAlignment="textStart"
